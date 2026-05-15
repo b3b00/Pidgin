@@ -31,7 +31,7 @@ System.IO.File.AppendAllText("./build.txt",e+"\n");
         public static void Parse(string source)
         {
             var p = GetParser();
-            va r =p.Parse(source);
+            var r=p.Parse(source);
             if(r.IsError) {
                foreach(var e in r.Errors) {
                System.IO.File.AppendAllText("./build.txt",e.ErrorMessage+"\n");
