@@ -1,5 +1,6 @@
 <Project>
     <PropertyGroup>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
         <Authors>benjamin.hodgson</Authors>
         <Copyright>© Benjamin Hodgson, 2017-2022</Copyright>
         <Description>A lightweight, fast, and flexible parsing library for C#, developed at Stack Overflow.</Description>

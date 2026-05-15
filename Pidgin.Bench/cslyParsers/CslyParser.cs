@@ -1,4 +1,5 @@
 using sly.parser;
+using sly.parser.generator;
 
 namespace cslyparser
 {
@@ -13,7 +14,7 @@ namespace cslyparser
             {
                 ParserBuilder<JsonTokenGeneric, object> builder = new ParserBuilder<JsonTokenGeneric, object>();
                 var instance = new EbnfJsonGenericParser();
-                var b = builder.Build(instance, ParserType.EBNF_LL_RECURSIVE_DESCENT, "root");
+                var b = builder.BuildParser(instance, ParserType.EBNF_LL_RECURSIVE_DESCENT, "root");
                 if (b.IsOk)
                 {
                     _parser = b.Result;

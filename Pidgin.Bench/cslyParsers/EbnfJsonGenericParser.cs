@@ -11,7 +11,7 @@ namespace cslyparser
     public class EbnfJsonGenericParser
     {
 
-        object val = val;
+        object val = null;
 
         [Production("root : value")]
         public object Root(object value)
