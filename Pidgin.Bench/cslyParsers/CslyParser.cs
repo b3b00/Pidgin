@@ -32,10 +32,10 @@ System.IO.File.AppendAllText("./build.txt",e+"\n");
         {
             var p = GetParser();
             va r =p.Parse(source);
-if(r.IsError) {
-foreach(var e in r.Errors) {
-System.IO.File.AppendAllText("./build.txt",e.ErrorMessage+"\n");
-}
-        }
+            if(r.IsError) {
+               foreach(var e in r.Errors) {
+               System.IO.File.AppendAllText("./build.txt",e.ErrorMessage+"\n");
+               }
+            } }
     }
 }
