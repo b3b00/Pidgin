@@ -17,6 +17,7 @@ namespace cslyparser
                 var b = builder.BuildParser(instance, ParserType.EBNF_LL_RECURSIVE_DESCENT, "root");
                 if (b.IsOk)
                 {
+System.IO.File.AppendAllText("./build.txt", "parser build ok\n");
                     _parser = b.Result;
                 }
 else {
@@ -34,8 +35,11 @@ System.IO.File.AppendAllText("./build.txt",e+"\n");
             var r=p.Parse(source);
             if(r.IsError) {
                foreach(var e in r.Errors) {
-               System.IO.File.AppendAllText("./build.txt",e.ErrorMessage+"\n");
+               System.IO.File.AppendAllText("./parsed.txt",e.ErrorMessage+"\n");
                }
-            } }
+            } 
+else {
+System.IO.File.AppendAllText("./parsed.txt","parse ok \n");
+}}
     }
 }
