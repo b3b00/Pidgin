@@ -40,7 +40,7 @@ public class JsonBench
     {
         JsonParser.Parse(_bigJson);
     }
-
+[Benchmark]
     [BenchmarkCategory("Big")]
     public void BigJson_Csly()
     {
@@ -74,7 +74,7 @@ public class JsonBench
     {
         JsonParser.Parse(_longJson);
     }
-
+[Benchmark]
     [BenchmarkCategory("Long")]
     public void LongJson_Csly()
     {
@@ -108,7 +108,7 @@ public class JsonBench
     {
         JsonParser.Parse(_deepJson);
     }
-
+[Benchmark]
     [BenchmarkCategory("Deep")]
     public void DeepJson_Csly()
     {
@@ -141,7 +141,7 @@ public class JsonBench
     {
         JsonParser.Parse(_wideJson);
     }
-
+[Benchmark]
     [BenchmarkCategory("Wide")]
     public void WideJson_Csly()
     {
