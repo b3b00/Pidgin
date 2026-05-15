@@ -19,6 +19,11 @@ namespace cslyparser
                 {
                     _parser = b.Result;
                 }
+else {
+foreach(var e in b.Errors) {
+System.IO.File.AppendLine("./build.txt",e);
+}
+}
             }
             return _parser;
         }
