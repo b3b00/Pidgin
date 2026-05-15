@@ -6,7 +6,7 @@
         <OutputType>exe</OutputType>
         <SignAssembly>false</SignAssembly>  <!-- Sprache is not signed -->
         <!-- https://github.com/dotnet/roslyn-analyzers/pull/6504 -->
-        <NoWarn>$(NoWarn);CA1852</NoWarn>
+        <!-- <NoWarn>$(NoWarn);CA1852;CA1002;SA1134;CA1720;SA1516;SA1508;SA1505;SA1028;CA1027;CA1008;SA1400;SA1024;SA1008;SA1300;SA1001;CA1052;SA1513;SA1210;SA1507;SA1515</NoWarn> -->
     </PropertyGroup>
 
     <ItemGroup>
@@ -19,6 +19,7 @@
         <PackageReference Include="BenchmarkDotNet" />
         <PackageReference Include="Sprache" />
         <PackageReference Include="Superpower" />
+        <PackageReference Include="sly" />
     </ItemGroup>
 
 </Project>

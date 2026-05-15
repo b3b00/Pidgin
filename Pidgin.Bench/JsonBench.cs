@@ -10,6 +10,7 @@ using BenchmarkDotNet.Configs;
 using Pidgin.Bench.SpracheParsers;
 using Pidgin.Bench.SuperpowerParsers;
 using Pidgin.Examples.Json;
+using cslyparser;
 
 namespace Pidgin.Bench;
 
@@ -40,6 +41,12 @@ public class JsonBench
         JsonParser.Parse(_bigJson);
     }
 
+    [BenchmarkCategory("Big")]
+    public void BigJson_Csly()
+    {
+        Csly.Parse(_bigJson);
+    }
+
     [Benchmark]
     [BenchmarkCategory("Big")]
     public void BigJson_Sprache()
@@ -66,6 +73,12 @@ public class JsonBench
     public void LongJson_Pidgin()
     {
         JsonParser.Parse(_longJson);
+    }
+
+    [BenchmarkCategory("Long")]
+    public void LongJson_Csly()
+    {
+        Csly.Parse(_longJson);
     }
 
     [Benchmark]
@@ -96,6 +109,12 @@ public class JsonBench
         JsonParser.Parse(_deepJson);
     }
 
+    [BenchmarkCategory("Deep")]
+    public void DeepJson_Csly()
+    {
+        Csly.Parse(_deepJson);
+    }
+
     [Benchmark]
     [BenchmarkCategory("Deep")]
     public void DeepJson_Sprache()
@@ -121,6 +140,12 @@ public class JsonBench
     public void WideJson_Pidgin()
     {
         JsonParser.Parse(_wideJson);
+    }
+
+    [BenchmarkCategory("Wide")]
+    public void WideJson_Csly()
+    {
+        Csly.Parse(_wideJson);
     }
 
     [Benchmark]
