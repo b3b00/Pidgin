@@ -21,7 +21,7 @@ namespace cslyparser
                 }
 else {
 foreach(var e in b.Errors) {
-System.IO.File.AppendLine("./build.txt",e);
+System.IO.File.AppendAllText("./build.txt",e+"\n");
 }
 }
             }
